@@ -1,4 +1,4 @@
-package com.more_food_recipe;
+package com.yanz.more_food_recipe;
 
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
@@ -14,7 +14,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "more_food_recipe";
+    return "Food Recipe";
   }
 
   @Override

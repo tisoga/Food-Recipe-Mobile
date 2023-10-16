@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "more_food_recipe.app"
-               BlueprintName = "more_food_recipe"
-               ReferencedContainer = "container:more_food_recipe.xcodeproj">
+               BuildableName = "FoodRecipe.app"
+               BlueprintName = "FoodRecipe"
+               ReferencedContainer = "container:FoodRecipe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "more_food_recipeTests.xctest"
-               BlueprintName = "more_food_recipeTests"
-               ReferencedContainer = "container:more_food_recipe.xcodeproj">
+               BuildableName = "FoodRecipeTests.xctest"
+               BlueprintName = "FoodRecipeTests"
+               ReferencedContainer = "container:FoodRecipe.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,9 +55,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "more_food_recipe.app"
-            BlueprintName = "more_food_recipe"
-            ReferencedContainer = "container:more_food_recipe.xcodeproj">
+            BuildableName = "FoodRecipe.app"
+            BlueprintName = "FoodRecipe"
+            ReferencedContainer = "container:FoodRecipe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -72,9 +72,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "more_food_recipe.app"
-            BlueprintName = "more_food_recipe"
-            ReferencedContainer = "container:more_food_recipe.xcodeproj">
+            BuildableName = "FoodRecipe.app"
+            BlueprintName = "FoodRecipe"
+            ReferencedContainer = "container:FoodRecipe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

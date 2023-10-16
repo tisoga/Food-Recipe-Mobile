@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         height: 75
     },
     headerLeftContainer: {
-        flex: 2
+        flex: 2.5,
     },
     headerRightContainer: {
         flex: 1,

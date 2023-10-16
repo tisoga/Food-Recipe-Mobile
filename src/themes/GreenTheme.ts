@@ -1,6 +1,6 @@
 import ThemeType from '../themes/type'
 
-const GreenTheme:ThemeType = {
+export const GreenTheme:ThemeType = {
     dark: false,
     colors: {
         background: '#fefbf1', //bg
@@ -12,7 +12,7 @@ const GreenTheme:ThemeType = {
     }
 }
 
-const GreenThemeDark:ThemeType = {
+export const GreenThemeDark:ThemeType = {
     dark: true,
     colors: {
         background: '#221a02', //bg

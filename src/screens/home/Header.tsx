@@ -27,7 +27,7 @@ const Header = ({ navigateToSearch, navigateToFavorite  }: HeaderProps): JSX.Ele
                     <Icon name='heart' size={45} style={colors.primary} />
                 </TouchableOpacity>
             </View>
-            <View>
+            <View style={{marginTop: 5}}>
                 <TouchableOpacity style={styles.searchContainer} onPress={navigateToSearch} activeOpacity={1}>
                     <>
                         <Icon name='magnify' size={28} />

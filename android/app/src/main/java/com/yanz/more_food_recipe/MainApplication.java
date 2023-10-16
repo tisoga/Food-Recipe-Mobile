@@ -1,4 +1,4 @@
-package com.more_food_recipe;
+package com.yanz.more_food_recipe;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
