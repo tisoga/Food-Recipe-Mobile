@@ -1,0 +1,1 @@
+export const API_URL = 'https://api-food-data.ryan-retired.com/api/v1'
