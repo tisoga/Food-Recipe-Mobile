@@ -20,6 +20,24 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginRight: 10
     },
+    modalContainer: {
+        flex: 0,
+        height: 100,
+        margin: 0,
+        marginTop: 20,
+        justifyContent: 'flex-start'
+    },
+    modalItemsContainer: {
+        alignItems: 'center',
+        marginVertical: 10,
+        marginHorizontal: 10,
+    },
+    btnThemeContainer: {
+        flexWrap: 'wrap',
+        flexDirection: 'row',
+        gap: 20,
+        marginTop: 10
+    },
     headerText: {
         color: '#7da40a',
         fontSize: 40,
@@ -52,6 +70,10 @@ const styles = StyleSheet.create({
     textSecondary: {
         fontSize: 18,
         opacity: 0.7
+    },
+    textTitleModal: {
+        fontSize: 25,
+        textAlign: 'center'
     },
     popularCard: {
         justifyContent: 'flex-end',
@@ -114,6 +136,16 @@ const styles = StyleSheet.create({
         width: '80%',
         height: '80%',
         resizeMode: 'stretch'
+    },
+    changeBtnTheme: {
+        marginVertical: 10,
+        height: 35,        
+        justifyContent: 'center'
+    },
+    btnThemeColor: {
+        height: 30, 
+        width: 30, 
+        borderRadius: 20 
     }
 })
 

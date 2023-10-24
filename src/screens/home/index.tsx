@@ -1,4 +1,4 @@
-import { ScrollView, Text } from 'react-native';
+import { ScrollView, Button, Text } from 'react-native';
 import styles from './styles';
 import Header from './Header';
 import PopularRecipe from './PopularRecipe';
@@ -11,11 +11,16 @@ import { useQueries } from '@tanstack/react-query'
 import getCategory from '../../fetching/getCategory';
 import getRecipe from '../../fetching/getRecipe';
 import LoadingScreen from '../loading_screen';
+import { useDispatch } from 'react-redux';
+import { changeTheme } from '../../redux/ThemeSlice';
+import Modal from 'react-native-modal'
+import ChangeTheme from './ChangeTheme';
 
 type props = NativeStackScreenProps<RootStackParamsList, 'Home'>
 
 const HomeScreen = ({ navigation }: props): JSX.Element => {
     const colors = usedTheme()
+    const dispatch = useDispatch()
 
     const result = useQueries({
         queries: [
@@ -75,12 +80,18 @@ const HomeScreen = ({ navigation }: props): JSX.Element => {
             <LoadingScreen />
         )
     }
+
+    const onClick = () => {
+        dispatch(changeTheme('green'))
+    }
+
     return (
         <ScrollView style={[styles.mainContainer, colors.background]}>
             <Header navigateToSearch={navigateToSearch} navigateToFavorite={navigateToFavoriteFood} />
             <PopularRecipe data={result[2].data} navigate={navigateToDetail} />
             <Category data={result[0].data} navigateToCategory={navigateToCategory} navigateAllCategory={navigateToAllCategory} />
             <Recipes data={result[1].data} navigateDetail={navigateToDetail} navigateAllRecipe={navigateToAllRecipe} />
+            <ChangeTheme />
         </ScrollView>
     )
 }

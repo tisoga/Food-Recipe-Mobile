@@ -1,7 +1,6 @@
 import { View, Text, ActivityIndicator } from 'react-native';
 import styles from './styles';
 import usedTheme from '../../hook/usedTheme';
-
 const LoadingScreen = () => {
     const colors = usedTheme()
     return (

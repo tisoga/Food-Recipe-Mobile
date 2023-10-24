@@ -21,9 +21,11 @@ const SearchInput = ({ navigateGoBack, onHandlerSearch, focus = true, value, onC
             <View style={styles.searchInputContainer}>
                 <TextInput
                     placeholder='Search Recipes'
-                    style={{ fontSize: 20 }}
+                    style={{ fontSize: 20, width: '80%' }}
                     autoFocus={focus}
                     value={value}
+                    returnKeyType="search"
+                    onSubmitEditing={() => onHandlerSearch(value)}
                     onChangeText={(val) => onChange(val)}
                 />
                 <Pressable style={[styles.searchButton, colors.button]} onPress={() => onHandlerSearch(value)}>

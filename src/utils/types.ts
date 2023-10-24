@@ -28,3 +28,25 @@ interface FoodDataDetailType extends FoodDataType {
     ingredients: Array<IngredientsType>
     instructions: Array<string>
 }
+
+type ThemeType = {
+    dark: boolean;
+    colors: {
+        primary: string;
+        background: string;
+        card: string;
+        text: string;
+        border: string;
+        notification: string;
+    };
+};
+
+type ThemeList = 'green' | 'blue' | 'brown' | 'purple'
+
+type ThemeSelectorType = {
+    themeName: ThemeList
+    colors: {
+        light: ThemeType,
+        dark: ThemeType
+    }
+}

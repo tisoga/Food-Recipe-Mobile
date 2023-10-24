@@ -2,7 +2,8 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     mainContainer: {
-        flex: 1
+        flex: 1,
+        flexDirection: 'column',
     },
     headerContainer: {
         flexDirection: 'row',
@@ -36,6 +37,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         flexWrap: 'wrap',
         justifyContent: 'space-between',
+        flex: 1
     },
     button: {
         justifyContent: 'center',
@@ -73,6 +75,12 @@ const styles = StyleSheet.create({
         width: 70,
         height: 70,
         resizeMode: 'stretch'
+    },
+    notFoundContainer: {
+        flex: 1,
+        backgroundColor: 'white',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
 })
 

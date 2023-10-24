@@ -1,5 +1,3 @@
-import ThemeType from '../themes/type'
-
 export const GreenTheme:ThemeType = {
     dark: false,
     colors: {
@@ -7,7 +5,7 @@ export const GreenTheme:ThemeType = {
         primary: '#7da40a', //primary
         text: '#221a02', //text
         card: '#9fb5f9', //secondary
-        border: 'rgba(125, 164, 10, 0.4)',
+        border: 'rgba(125, 164, 10, 0.4)', //primary-rgb
         notification: '#390bc1' //accent
     }
 }
@@ -19,9 +17,7 @@ export const GreenThemeDark:ThemeType = {
         primary: '#7da40a', //primary
         text: '#fefbf1', //text
         card: '#000105', //secondary
-        border: 'rgba(125, 164, 10, 0.5)',
+        border: 'rgba(125, 164, 10, 0.5)', //primary-rgb
         notification: '#906ef7' //accent
     }
 }
-
-export default GreenTheme

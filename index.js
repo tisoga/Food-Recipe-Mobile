@@ -18,13 +18,12 @@ let persistor = persistStore(store)
 
 const Application = () => {
     const scheme = useColorScheme()
+
     return (
         <Provider store={store}>
             <QueryClientProvider client={queryClient}>
                 <PersistGate persistor={persistor} loading={null}>
-                    <NavigationContainer theme={scheme === 'dark' ? GreenThemeDark : GreenTheme}>
-                        <App />
-                    </NavigationContainer>
+                    <App />
                 </PersistGate>
             </QueryClientProvider>
         </Provider>

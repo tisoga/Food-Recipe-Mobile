@@ -7,7 +7,7 @@ import {
 } from 'react-native'
 import styles from './styles'
 import { RecipeCard } from '../home/_components'
-import { PaginationBtn, CategoryCard } from './_components'
+import { PaginationBtn, CategoryCard, NotFound } from './_components'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import { RootStackParamsList } from '../../../App'
 import { useQuery } from '@tanstack/react-query'
@@ -74,7 +74,7 @@ const AllRecipeScreen = ({ route, navigation }: AllRecipeScreenProps) => {
     }
 
     return (
-        <ScrollView style={styles.mainContainer}>
+        <ScrollView contentContainerStyle={styles.mainContainer}>
             {type === 'Search'
                 ?
                 <SearchInput
@@ -120,8 +120,9 @@ const AllRecipeScreen = ({ route, navigation }: AllRecipeScreenProps) => {
                     </>
                     :
                     <>
+                        { data?.length == 0 && (<NotFound />) }
                         {data?.map((item) => {
-                            if ('categories' in item) {
+                            if ('categories' in item)
                                 return (
                                     <RecipeCard
                                         key={item.id}
@@ -133,7 +134,6 @@ const AllRecipeScreen = ({ route, navigation }: AllRecipeScreenProps) => {
                                         })}
                                         type='recipe' />
                                 )
-                            }
                         })}
                     </>
                 }

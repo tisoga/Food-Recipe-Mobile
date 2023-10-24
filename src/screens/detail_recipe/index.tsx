@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Dimensions, ImageBackground, TouchableOpacity } from "react-native"
+import { View, Text, ScrollView, Dimensions, ImageBackground, TouchableOpacity, Vibration } from "react-native"
 import styles from './styles'
 import imgTest from '../../assets/carbonala.jpg'
 import usedTheme from "../../hook/usedTheme"
@@ -11,7 +11,6 @@ import getRecipeDetail from "../../fetching/getRecipeDetail"
 import { useDispatch, useSelector } from "react-redux"
 import { addToFavorite, deleteFromFavorite } from "../../redux/FavoriteFoodSlice"
 import { RootState } from "../../redux/store"
-import { useEffect } from "react"
 import LoadingScreen from "../loading_screen"
 
 type props = NativeStackScreenProps<RootStackParamsList, 'Detail'>
@@ -51,10 +50,12 @@ const DetailRecipeScreen = ({ route, navigation }: props) => {
 
     const onClickToFavorite = () => {
         dispatch(addToFavorite(data))
+        Vibration.vibrate(50)
     }
 
     const onDeleteFavorite = () => {
         dispatch(deleteFromFavorite(data.id))
+        Vibration.vibrate(50)
     }
 
     return (
